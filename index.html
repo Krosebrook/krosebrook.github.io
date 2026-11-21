@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Rosebrook · Loxihart &amp; Abstrekkt Open Source</title>
+  <meta name="description" content="Open-source Claude Code marketplaces, stateless MCP 2025.11 servers, checkpoint-driven agent workflows, and developer tools by Kyle Rosebrook.">
+  <link rel="canonical" href="https://krosebrook.github.io/">
+  <meta property="og:title" content="Kyle Rosebrook · Loxihart &amp; Abstrekkt Open Source">
+  <meta property="og:description" content="AI tools, checked against real work. Open-source plugin marketplaces, stateless MCP servers, and verification tooling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://krosebrook.github.io/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Kyle Rosebrook",
+      "alternateName": "Krosebrook",
+      "homeLocation": { "@type": "Place", "name": "Chicago, IL" },
+      "url": "https://krosebrook.github.io/",
+      "sameAs": [
+        "https://github.com/Krosebrook",
+        "https://gist.github.com/Krosebrook",
+        "https://abstrekkt.com",
+        "https://linkedin.com/in/kylerosebrook"
+      ]
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0f1216;
+      --surface: #161b22;
+      --ink: #f0f4f8;
+      --muted: #b1bac4;
+      --rule: #2d3540;
+      --accent: #f59e0b;
+      --code-bg: #090c10;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 8px;
+      background: var(--accent);
+      color: #090c10;
+      padding: 8px 14px;
+      font-weight: 700;
+    }
+    .skip-link:focus { left: 12px; z-index: 10; }
+    header, main, footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      padding-top: 56px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .kicker {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+    .lead {
+      max-width: 64ch;
+      color: var(--muted);
+      font-size: 1.125rem;
+      margin: 0 0 24px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 0 0 20px;
+      letter-spacing: -0.01em;
+    }
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      padding: 22px;
+      border-radius: 6px;
+    }
+    article h3 {
+      margin: 0 0 6px;
+      font-size: 1.125rem;
+    }
+    .role {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    article p {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+    pre {
+      margin: 0;
+      padding: 12px;
+      background: var(--code-bg);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--rule);
+      vertical-align: top;
+    }
+    th {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer {
+      padding-top: 28px;
+      padding-bottom: 56px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <p class="kicker">Kyle Rosebrook · Chicago, IL · @Krosebrook</p>
+    <h1>AI tools, checked against real work.</h1>
+    <p class="lead">Open-source Claude Code plugin marketplaces, stateless Streamable HTTP MCP servers, checkpoint-driven coding workflows, and WCAG 2.2 AA interface primitives from Loxihart and Abstrekkt.</p>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="https://github.com/Krosebrook">GitHub Profile</a></li>
+        <li><a href="https://gist.github.com/Krosebrook">Public Gists</a></li>
+        <li><a href="https://github.com/ChaosClubCo">ChaosClubCo Org</a></li>
+        <li><a href="https://abstrekkt.com">Abstrekkt.com</a></li>
+        <li><a href="https://linkedin.com/in/kylerosebrook">LinkedIn</a></li>
+        <li><a href="/llms.txt">llms.txt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="distributions-heading">
+      <h2 id="distributions-heading">Open-source distributions</h2>
+      <div class="repo-grid">
+        <article>
+          <h3><a href="https://github.com/Krosebrook/loxihart-skills">loxihart-skills</a></h3>
+          <p class="role">Loxihart Toolchest · Skill Foundry · MIT</p>
+          <p>Claude Code marketplace housing 98 ops, AI architecture, engineering, design, and business skills grouped into five domain plugins.</p>
+          <pre><code>/plugin marketplace add Krosebrook/loxihart-skills</code></pre>
+        </article>
+
+        <article>
+          <h3><a href="https://github.com/Krosebrook/augmentor-packs">augmentor-packs</a></h3>
+          <p class="role">Loxihart Ballast · Cadence Packs · MIT</p>
+          <p>Fifteen human-first coaching and verification packs plus five zero-dependency Node.js stdio MCP tool add-ons.</p>
+          <pre><code>/plugin marketplace add Krosebrook/augmentor-packs</code></pre>
+        </article>
+
+        <article>
+          <h3><a href="https://github.com/Krosebrook/navigating-ai-reality-plugin">navigating-ai-reality-plugin</a></h3>
+          <p class="role">Civic Compass · Reality Lens v3.0 · MIT</p>
+          <p>Eleven-tool stateless MCP 2025.11 server (stdio and Streamable HTTP) and citizen safety suite synthesized from 39 research notebooks.</p>
+          <pre><code>python3 reality_lens_http_app.py</code></pre>
+        </article>
+
+        <article>
+          <h3><a href="https://github.com/Krosebrook/loxihart-ratchet">loxihart-ratchet</a></h3>
+          <p class="role">Loxihart Ratchet · Pawl Ledger · MIT</p>
+          <p>Checkpoint-driven workflow for AI coding agents where progress advances only after verified behavior, independent review, and git ledger evidence.</p>
+          <pre><code>/plugin marketplace add Krosebrook/loxihart-ratchet</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="infrastructure-heading">
+      <h2 id="infrastructure-heading">Account governance, Codespaces, and Gist utilities</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Surface</th>
+            <th scope="col">Artifact</th>
+            <th scope="col">What it enforces</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account defaults</td>
+            <td><a href="https://github.com/Krosebrook/.github">Krosebrook/.github</a></td>
+            <td>Inherited <code>SECURITY.md</code>, <code>CONTRIBUTING.md</code>, <code>CODE_OF_CONDUCT.md</code>, YAML Issue Forms, and PR verification checklist.</td>
+          </tr>
+          <tr>
+            <td>Codespaces bootstrap</td>
+            <td><a href="https://github.com/Krosebrook/dotfiles">Krosebrook/dotfiles</a></td>
+            <td>Idempotent shell setup, safe Git config include preserving commit signing, and <code>gh</code> workflow inspection helpers.</td>
+          </tr>
+          <tr>
+            <td>Snippet &amp; Gist pack</td>
+            <td><a href="https://github.com/Krosebrook/Krosebrook/tree/main/gists">Krosebrook/Krosebrook/gists</a></td>
+            <td>Self-tested Streamable HTTP MCP probe, GitHub Actions 40-char SHA pin auditor, and CWE-918 DNS SSRF guard alongside <a href="https://gist.github.com/Krosebrook">public gists</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Maintained by <a href="https://github.com/Krosebrook">Kyle Rosebrook</a>. Deployed from <a href="https://github.com/Krosebrook/krosebrook.github.io">Krosebrook/krosebrook.github.io</a>.</p>
+  </footer>
+</body>
+</html>

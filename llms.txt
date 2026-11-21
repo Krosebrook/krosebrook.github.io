@@ -1,0 +1,17 @@
+# Kyle Rosebrook (Krosebrook) - Open-Source Index
+
+> Builder in Chicago, IL (Abstrekkt / Loxihart). AI tools, checked against real work.
+
+## Canonical repositories
+
+- [Loxihart Toolchest (Skill Foundry)](https://github.com/Krosebrook/loxihart-skills): Claude Code plugin marketplace housing 98 skills across five domain plugins.
+- [Loxihart Ballast (Cadence Packs)](https://github.com/Krosebrook/augmentor-packs): 15 coaching and verification packs plus 5 stdio MCP tool add-ons.
+- [Civic Compass (Reality Lens v3.0)](https://github.com/Krosebrook/navigating-ai-reality-plugin): Production Claude plugin and 11-tool stateless Streamable HTTP / stdio MCP 2025.11 server.
+- [Loxihart Ratchet (Pawl Ledger)](https://github.com/Krosebrook/loxihart-ratchet): Checkpoint-driven AI coding workflow with a local git evidence ledger.
+
+## Governance and developer tooling
+
+- [Profile & Snippet Pack](https://github.com/Krosebrook/Krosebrook): Account overview and zero-dependency MCP, SSRF, and GitHub Actions SHA-pinning scripts.
+- [Account Community Health Defaults](https://github.com/Krosebrook/.github): Security policy, contributor guide, YAML Issue Forms, and PR checklist.
+- [Codespaces Dotfiles](https://github.com/Krosebrook/dotfiles): Idempotent POSIX shell and Git bootstrap for GitHub Codespaces.
+- [Public Gists](https://gist.github.com/Krosebrook): Single-file utilities and WCAG 2.2 AA React primitives.
