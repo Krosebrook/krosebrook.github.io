@@ -1,6 +1,6 @@
 # krosebrook.github.io
 
-Static developer site and open-source index for [Kyle Rosebrook](https://github.com/Krosebrook), built with semantic HTML, WCAG 2.2 AA contrast and focus states, `llms.txt` discovery metadata, and zero runtime JavaScript frameworks.
+Static developer site and open-source index for [Kyle · Loxihart & Abstrekkt](https://github.com/Krosebrook), built with semantic HTML, WCAG 2.2 AA contrast and focus states, `llms.txt` discovery metadata, and zero runtime JavaScript frameworks.
 
 ## Deployment
 
